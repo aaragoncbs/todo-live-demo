@@ -4,8 +4,7 @@ import AddToDo from "@/components/AddToDo";
 import ToDoList from "@/components/ToDoList";
 
 export default function Home() {
-  const [refreshTodos, setRefreshTodos] = useState<(() => Promise<void>) | nul
-  
+const [refreshTodos, setRefreshTodos] = useState<(() => Promise<void>) | null>(null);  
   return (
     <div>
       <AddToDo onAdd={() => refreshTodos && refreshTodos()} />
